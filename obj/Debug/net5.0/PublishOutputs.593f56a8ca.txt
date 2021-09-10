@@ -1,0 +1,11 @@
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\publish\APiCoreTraning.exe
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\publish\appsettings.Development.json
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\publish\appsettings.json
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\publish\APiCoreTraning.dll
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\publish\APiCoreTraning.deps.json
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\publish\APiCoreTraning.runtimeconfig.json
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\publish\APiCoreTraning.pdb
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\publish\Microsoft.OpenApi.dll
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\publish\Swashbuckle.AspNetCore.Swagger.dll
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
