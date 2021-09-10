@@ -3,6 +3,8 @@ using APiCoreTraning.Repositories;
 using APiCoreTraning.Entities;
 using System.Collections.Generic;
 using System;
+using APiCoreTraning.DTOs;
+using System.Linq;
 
 namespace APiCoreTraning.Controllers
 {
@@ -10,23 +12,24 @@ namespace APiCoreTraning.Controllers
     [Route("items")]
     public class ItemsController : ControllerBase
     {
-        private readonly ItemsRepo _itemsRepo;
+        private readonly IItemsRepo _itemsRepo;
 
-        public ItemsController()
+        public ItemsController(IItemsRepo repository)
         {
-            _itemsRepo = new ItemsRepo();
+            _itemsRepo = repository;
         }
 
         [HttpGet]
-        public IEnumerable<Item> GetItems()
+        public ActionResult<IEnumerable<ItemDTO>> GetItems()
         {
-            return _itemsRepo.GetItems();
+            return Ok(_itemsRepo.GetItems().Select(y=>y.AsDto()));
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Item> GetItem(Guid id)
+        public ActionResult<ItemDTO> GetItem(Guid id)
         {
-            var item = _itemsRepo.GetItem(id);
+            var item = _itemsRepo.GetItem(id)
+                .AsDto();
             if (item == null)
                 return NotFound();
             else return Ok(item);
