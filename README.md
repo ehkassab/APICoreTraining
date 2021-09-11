@@ -13,6 +13,18 @@
   	- add group in tasks.json to easy buildCommit Testing
 	- Dependency Inversion principle: is that class should depend on interface instead of class.
 	- Dependency Injection 
+	- Dotnet add package MongoDB.Driver
+	- Container is an instance of Image
+	- .net Secret Manager
+	- Configuration Services can be used by 
+		- Appsettings.json
+		- CLI
+		- Environment Variables
+		- Cloud sources
+		- Secret manager. Dotnet user-secrets init
+		- Create default builder is taking care of inject secret manger automatically.
+		- dotnet user-secrets set MongoPassword:Password P@wer2342
+
 		
 ## Main Course URL 
 

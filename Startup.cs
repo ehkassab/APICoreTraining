@@ -45,6 +45,8 @@ namespace APiCoreTraning
             {   
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "APiCoreTraning", Version = "v1" });
             });
+
+            services.AddHealthChecks();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,6 +65,7 @@ namespace APiCoreTraning
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHealthChecks("/hc");
             });
         }
     }
