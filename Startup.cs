@@ -38,8 +38,8 @@ namespace APiCoreTraning
                     var settings = Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
                     return new MongoClient(settings.ConnectionString);
             });
-            services.AddSingleton<IItemsRepo,MongoDbItemsRepo>();
-            // services.AddSingleton<IItemsRepo,ItemsRepo>();
+            // services.AddSingleton<IItemsRepo,MongoDbItemsRepo>();
+            services.AddSingleton<IItemsRepo,ItemsRepo>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {   

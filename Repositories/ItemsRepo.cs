@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using APiCoreTraning.Entities;
 
 namespace APiCoreTraning.Repositories
@@ -14,20 +15,20 @@ namespace APiCoreTraning.Repositories
             new Item { Id = Guid.NewGuid(), Name = "C", Price = 8, CreatedDate = DateTimeOffset.UtcNow }
         };
 
-        public IEnumerable<Item> GetItems()
+        public async Task<IEnumerable<Item>> GetItemsAsync()
         {
-            return items;
+            return await Task.FromResult(items);
         }
 
-        public Item GetItem(Guid id)
+        public async Task<Item> GetItemAsync(Guid id)
         {
-            return items.Where(u => u.Id == id).FirstOrDefault();
+            return  await Task.FromResult(items.Where(u => u.Id == id).FirstOrDefault());
         }
 
-        public Item CreateItem(Item item)
+        public async Task<Item> CreateItemAsync(Item item)
         {
             items.Add(item);
-            return GetItem(item.Id);
+            return await GetItemAsync(item.Id);
         }
     }
 }

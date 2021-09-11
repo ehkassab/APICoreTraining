@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using APiCoreTraning.Entities;
 using MongoDB.Driver;
 
@@ -17,18 +18,18 @@ namespace APiCoreTraning.Repositories
             IMongoDatabase database = mongoClient.GetDatabase(dbName);
             itemsCollection = database.GetCollection<Item>(collectionName);
         }
-        public Item CreateItem(Item item)
+        public Task<Item> CreateItemAsync(Item item)
         {
-            itemsCollection.InsertOne(item);
-            return GetItem(item.Id);
+            itemsCollection.InsertOneAsync(item);
+            return GetItemAsync(item.Id);
         }
 
-        public Item GetItem(Guid id)
+        public Task<Item> GetItemAsync(Guid id)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Item> GetItems()
+        public Task<IEnumerable<Item>> GetItemsAsync()
         {
             throw new NotImplementedException();
         }

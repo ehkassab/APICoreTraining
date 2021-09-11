@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System;
 using APiCoreTraning.DTOs;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace APiCoreTraning.Controllers
 {
@@ -20,23 +21,22 @@ namespace APiCoreTraning.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<ItemDTO>> GetItems()
+        public async Task<ActionResult<IEnumerable<ItemDTO>>> GetItemsAsync()
         {
-            return Ok(_itemsRepo.GetItems().Select(y=>y.AsDto()));
+            return  Ok(await _itemsRepo.GetItemsAsync());
         }
 
         [HttpGet("{id}")]
-        public ActionResult<ItemDTO> GetItem(Guid id)
+        public async Task<ActionResult<ItemDTO>> GetItemAsync(Guid id)
         {
-            var item = _itemsRepo.GetItem(id)
-                .AsDto();
+            var item =  await _itemsRepo.GetItemAsync(id);
             if (item == null)
                 return NotFound();
             else return Ok(item);
         }
 
         [HttpPost]
-        public ActionResult<ItemDTO> CreateItem(ItemDTO itemDto)
+        public async Task<ActionResult<ItemDTO>> CreateItem(ItemDTO itemDto)
         {
             Item item = new Item{
                 Id = Guid.NewGuid(),
@@ -44,7 +44,7 @@ namespace APiCoreTraning.Controllers
                 Price = itemDto.Price,
                 CreatedDate = DateTimeOffset.UtcNow
             };
-            return Ok(_itemsRepo.CreateItem(item).AsDto());
+            return Ok(await _itemsRepo.CreateItemAsync(item));
         }
 
     }
