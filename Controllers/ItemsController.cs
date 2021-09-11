@@ -34,5 +34,18 @@ namespace APiCoreTraning.Controllers
                 return NotFound();
             else return Ok(item);
         }
+
+        [HttpPost]
+        public ActionResult<ItemDTO> CreateItem(ItemDTO itemDto)
+        {
+            Item item = new Item{
+                Id = Guid.NewGuid(),
+                Name = itemDto.Name,
+                Price = itemDto.Price,
+                CreatedDate = DateTimeOffset.UtcNow
+            };
+            return Ok(_itemsRepo.CreateItem(item).AsDto());
+        }
+
     }
 }

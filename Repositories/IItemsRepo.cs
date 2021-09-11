@@ -8,5 +8,6 @@ namespace APiCoreTraning.Repositories
     {
         Item GetItem(Guid id);
         IEnumerable<Item> GetItems();
+        Item CreateItem(Item item);
     }
 }

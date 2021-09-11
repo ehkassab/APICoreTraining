@@ -23,5 +23,11 @@ namespace APiCoreTraning.Repositories
         {
             return items.Where(u => u.Id == id).FirstOrDefault();
         }
+
+        public Item CreateItem(Item item)
+        {
+            items.Add(item);
+            return GetItem(item.Id);
+        }
     }
 }

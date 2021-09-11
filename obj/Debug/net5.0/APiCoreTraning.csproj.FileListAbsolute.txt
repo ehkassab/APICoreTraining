@@ -27,3 +27,15 @@ E:\WS\Projs\APIFullTraining\APiCoreTraning\obj\Debug\net5.0\APiCoreTraning.dll
 E:\WS\Projs\APIFullTraining\APiCoreTraning\obj\Debug\net5.0\ref\APiCoreTraning.dll
 E:\WS\Projs\APIFullTraining\APiCoreTraning\obj\Debug\net5.0\APiCoreTraning.pdb
 E:\WS\Projs\APIFullTraining\APiCoreTraning\obj\Debug\net5.0\APiCoreTraning.genruntimeconfig.cache
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\DnsClient.dll
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\MongoDB.Bson.dll
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\MongoDB.Driver.dll
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\MongoDB.Driver.Core.dll
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\MongoDB.Libmongocrypt.dll
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\SharpCompress.dll
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\runtimes\win\native\libzstd.dll
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\runtimes\win\native\snappy32.dll
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\runtimes\win\native\snappy64.dll
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\runtimes\linux\native\libmongocrypt.so
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
+E:\WS\Projs\APIFullTraining\APiCoreTraning\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
