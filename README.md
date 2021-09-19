@@ -24,6 +24,14 @@
 		- Secret manager. Dotnet user-secrets init
 		- Create default builder is taking care of inject secret manger automatically.
 		- dotnet user-secrets set MongoPassword:Password P@wer2342
+		- Docker file is a kind of template to write all things that is needed to run the application.
+		- Docker engine take docker file to build docker image, then to container registry to production env then Docker container
+		- 	- Docker build -t ApiLEarn:v1 .
+		- Docker network create apicorenetwork
+		- Docker run -it --rm -p 8080:80 -e MongoDbSettings:host=mongo -e MongoDbSettings:Password=Pass#word1 -- network=net5tutorial 		catalog:v1
+		- Docker login
+		- Docker push imagename
+
 
 		
 ## Main Course URL 
